@@ -38,13 +38,13 @@ Loop
 		MouseClick, Left, PicX, PicY, 3
 		Send ^c
 		Run %clipboard%
-		Sleep 1000
 		Sleep 750
+		Winclose, Email
 		Muletxt = '%Email%%Now%@yopmail.com': '%Password%',
 		FileAppend, %Muletxt%`n, Mules.txt
+		
 }
 		Start = %Now%
 	}
 MsgBox, 262144, Mule Made, Successfully Made %NumMules% Mules!
 ExitApp
-
